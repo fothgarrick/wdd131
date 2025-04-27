@@ -1,70 +1,75 @@
-/* Default page settings */
 body {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-    line-height: 1.6;
-    text-align: center;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-/* Main content box */
-.main-content {
-    max-width: 600px;
-    margin: 30px auto; /* Centers the box with a bit of space from top */
-    padding: 30px;
-    background-color: white; /* White background for content box */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    text-align: left; /* Left-align text inside */
-}
-
-/* Logo image */
-.logo {
-    width: 150px;
-    height: auto;
-    margin-top: 20px;
-}
-
-/* Title and subtitle styles */
-h1, h2 {
-    letter-spacing: 2px; /* Space out letters */
-    text-transform: uppercase; /* Make all caps */
-    font-weight: bold;
-}
-
-/* Main title (h1) */
-h1.title {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-/* Subtitle (h2) */
-h2.subtitle {
-    font-size: 20px;
-    color: #006EB6; /* BYUI color */
-    margin-bottom: 20px;
-}
-
-/* Paragraph and list styles */
-p, ol {
-    font-size: 18px;
-    line-height: 1.8;
-    color: #333;
-}
-
-ol {
-    padding-left: 20px;
-}
-
-/* Emphasized text */
-em {
-    font-style: italic;
-    color: #006EB6; /* BYUI color for emphasis */
-}
-
-/* Optional: Add some overall padding for extra clean look */
-body {
     padding: 20px;
-}
+    background-color: #f4f4f4;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  .main-content {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+  }
+  
+  header {
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+  }
+  
+  .subtitle {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #006EB6;
+    margin: 8px 0;
+  }
+  
+  .divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 24px 0;
+  }
+  
+  main {
+    text-align: left;
+  }
+  
+  p {
+    margin: 0 0 16px;
+  }
+  
+  em {
+    font-style: italic;
+  }
+  
+  .does-list {
+    padding-left: 40px;
+    margin: 0;
+    list-style-position: outside;
+  }
+  
+  .does-list li {
+    margin-bottom: 12px;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .logo {
+    width: 200px;
+    height: auto;
+  }
+  

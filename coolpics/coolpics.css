@@ -48,6 +48,7 @@ figure {
 
 a {
   color: var(--accent-color);
+  text-decoration: none;
 }
 
 .menu-button {
@@ -88,7 +89,7 @@ a {
   }
 }
 
-/* Dialog styles */
+/* Modal viewer styles */
 dialog#viewer {
   width: 100%;
   height: 100%;

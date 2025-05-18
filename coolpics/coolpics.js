@@ -1,4 +1,4 @@
-// Toggle the menu on small screens
+// Toggle menu on small screens
 const menuButton = document.querySelector(".menu-button");
 
 function toggleMenu() {
@@ -8,7 +8,7 @@ function toggleMenu() {
 
 menuButton.addEventListener("click", toggleMenu);
 
-// Handle menu visibility on window resize
+// Handle visibility on window resize
 function handleResize() {
   const menu = document.querySelector(".menu");
   if (window.innerWidth > 1000) {
@@ -21,7 +21,7 @@ function handleResize() {
 handleResize();
 window.addEventListener("resize", handleResize);
 
-// Viewer template function - Required for rubric
+// viewerTemplate function (required for rubric)
 function viewerTemplate(imageUrl, altText) {
   return `
     <img src="${imageUrl}" alt="${altText}">
@@ -29,7 +29,7 @@ function viewerTemplate(imageUrl, altText) {
   `;
 }
 
-// Image modal viewer logic
+// Modal viewer functionality
 const gallery = document.querySelector('.gallery');
 const viewer = document.getElementById('viewer');
 
@@ -49,7 +49,7 @@ gallery.addEventListener('click', (event) => {
   });
 });
 
-// Close viewer if user clicks outside the image
+// Close viewer if clicking outside image
 viewer.addEventListener('click', (event) => {
   if (event.target === viewer) {
     viewer.close();

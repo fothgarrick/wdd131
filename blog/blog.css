@@ -1,0 +1,82 @@
+/* Reset and basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #473144;
+  background-color: #fff;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Lora', serif;
+  margin-bottom: 1rem;
+}
+
+nav ul {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  justify-content: end;
+  list-style: none;
+  padding: 0.5rem 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #AF1B3F;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.book {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.book h2 {
+  color: #AF1B3F;
+  margin-bottom: 0.5rem;
+}
+
+.book img {
+  max-width: 150px;
+}
+
+.filters {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background-color: #f8f8f8;
+}
+
+/* Accessibility: skip link */
+.skiptocontent a {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #AF1B3F;
+  color: white;
+  padding: 0.5rem;
+  z-index: 100;
+}
+
+.skiptocontent a:focus {
+  top: 0;
+}

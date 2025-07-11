@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+
+:root {
+  --primary-color: #1B98E0;
+  --secondary-color: #59c3c3;
+  --text-dark: #333;
+  --text-light: #ebebeb;
+  --primary-font: Arial, Helvetica, sans-serif;
+  --secondary-font: "Amatic SC", cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--primary-font);
+  color: var(--text-dark);
+  padding: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+}
+
+header img {
+  width: 48px;
+  height: auto;
+}
+
+header h1 {
+  font-family: var(--secondary-font);
+  font-size: 2rem;
+  margin: 0;
+}
+
+form.search-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+form.search-bar input {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+form.search-bar button {
+  background-color: var(--secondary-color);
+  border: none;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form.search-bar button img {
+  width: 20px;
+  height: 20px;
+}
+
+.recipe-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.tags span {
+  background: var(--secondary-color);
+  color: white;
+  padding: 0.25em 0.5em;
+  margin-right: 0.5em;
+  display: inline-block;
+}
+
+.rating {
+  margin: 0.5rem 0;
+}
+
+.description {
+  display: none;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  font-size: 0.9rem;
+  gap: 1rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.social {
+  display: flex;
+  gap: 1rem;
+}
+
+.social img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+@media screen and (min-width: 600px) {
+  .description {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  body {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .recipe-card {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 1.5rem;
+  }
+
+  .recipe-card img {
+    width: 50%;
+    max-width: 300px;
+  }
+
+  .recipe-card .text-content {
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    justify-content: center;
+    text-align: center;
+  }
+
+  footer > div {
+    width: 100%;
+  }
+
+  .social {
+    justify-content: center;
+  }
+}

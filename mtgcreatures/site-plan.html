@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <title>MTG Creature Gallery Site Plan</title>
+    <link type="text/css" rel="stylesheet" href="styles/site-plan.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>MTG Creature Gallery Site Plan</h1>
+      <h2>Garrick Foth</h2>
+      <h2>WDD 131.02</h2>
+    </header>
+    <main>
+      <!-- ------------------------Steps 2-3------------------------------ -->
+      <hr />
+      <h2>Overview</h2>
+
+      <h3>Purpose</h3>
+      <p>
+        The MTG Creature Gallery helps players explore Magic: The Gathering creature cards.
+        Users can filter by color or type, view details, and favorite cards for quick reference.
+      </p>
+
+      <h3>Audience</h3>
+      <p>
+        This site is for casual and intermediate MTG players who want a lightweight tool 
+        to browse creature cards and experiment with their favorite combinations.
+      </p>
+
+      <h3>Dynamic elements</h3>
+      <p>
+        JavaScript will be used to display a list of MTG creature cards from an array of objects. Users can filter the cards by color or type using dropdown menus. The site will also include a real-time search input that filters the cards by name as the user types. Users can click a card to add it to a favorites list, which will be shown on a separate page. JavaScript will use DOM interaction, event listeners, conditional logic, and array methods like <code>forEach()</code>, <code>filter()</code>, and <code>map()</code>. Data will be shared using ES modules.
+    </p>
+
+
+      <hr />
+      <h2>Branding</h2>
+      <h3>Website Logo</h3>
+      <img src="images/logo.png" alt="MTG Creature Gallery Logo" />
+
+      <hr />
+      <h2>Style Guide</h2>
+
+      <h3>Color Palette</h3>
+      Palette URL:
+      <a
+        href="https://coolors.co/396e94-e7c24f-a43312-381d2a-aabd8c"
+        target="_blank"
+        >https://coolors.co/396e94-e7c24f-a43312-381d2a-aabd8c</a
+      >
+
+      <table class="colors">
+        <tbody>
+          <tr>
+            <th>Primary</th>
+            <th>Secondary</th>
+            <th>Accent 1</th>
+            <th>Accent 2</th>
+          </tr>
+          <tr>
+            <td class="primary">#396E94</td>
+            <td class="secondary">#E7C24F</td>
+            <td class="accent1">#A43312</td>
+            <td class="accent2">#AABD8C</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Typography</h3>
+      <h4>Heading Font: Cinzel</h4>
+      <h4>Paragraph Font: Roboto</h4>
+
+      <h3>Normal paragraph example</h3>
+      <p>
+        Magic: The Gathering creatures are the core of many decks, each offering unique
+        powers and strategies. This gallery will help you explore and sort through some of the most iconic creatures.
+      </p>
+
+      <h3>Colored paragraph example</h3>
+      <p class="colored">
+        Browse red dragons, green beasts, blue elementals, and more — filter by color and type to discover your favorites.
+      </p>
+
+      <h3>Navigation</h3>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Favorites</a>
+      </nav>
+
+      <hr />
+      <h2>Content</h2>
+
+      <h3>Home page</h3>
+      <p>
+        This page will introduce the MTG Creature Gallery and explain the concept of creature types and the color pie in Magic: The Gathering. Users will see a list of creature cards (name, type, mana cost, image) loaded from a data array. A search input field will allow users to filter cards by name in real time. There will also be dropdowns or buttons for filtering by color or type. Each card will have a "Favorite" button to add it to a custom list stored in memory.
+      </p>
+
+      <h3>Favorites Page</h3>
+      <p>
+        This child page will display the user’s selected favorite creature cards.
+        Cards can be removed from the list here. The page will include short text explaining why it’s helpful
+        to preview creatures and plan decks.
+      </p>
+
+      <h2>Wireframes</h2>
+      <p>
+        Below are the wireframes showing the layout of each page.
+      </p>
+
+      <h3>Home</h3>
+      <p>This shows the layout for the search bar, filters, and card grid on the main page.</p>
+      <img src="images/home-wireframe.png" alt="home page wireframe" style="max-width: 100%; height: auto;" />
+
+      <h3>Favorites Page</h3>
+      <p>This shows how the user’s favorited cards will be displayed and managed.</p>
+      <img src="images/favorites-wireframe.png" alt="favorites page wireframe" style="max-width: 100%; height: auto;" />
+    </main>
+  </body>
+</html>

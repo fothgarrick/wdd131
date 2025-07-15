@@ -26,7 +26,7 @@ function ratingTemplate(rating) {
 function recipeTemplate(recipe) {
   return `
     <section class="recipe-card">
-      <img src="${recipe.image}" alt="${recipe.name}" />
+      <img src="${recipe.image}" alt="${recipe.name}" width="300" height="200" />
       <div class="text-content">
         <div class="tags">${tagsTemplate(recipe.tags)}</div>
         <h2>${recipe.name}</h2>

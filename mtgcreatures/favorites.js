@@ -17,11 +17,11 @@ function loadFavorites() {
     cardEl.classList.add("card");
 
     cardEl.innerHTML = `
-      <img src="${card.image}" alt="${card.name}" />
+      <img src="${card.image}" alt="${card.name}" loading="lazy" width="146" height="204" />
       <h3>${card.name}</h3>
       <p>${card.type} — ${card.color}</p>
       <p>Mana Cost: ${card.cost}</p>
-      <button>Remove</button>
+      <button aria-label="Remove ${card.name} from favorites">Remove</button>
     `;
 
     const btn = cardEl.querySelector("button");

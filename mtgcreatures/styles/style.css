@@ -20,7 +20,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  margin-bottom: 1rem; /* Improved spacing for layout stability */
+  margin-bottom: 1rem;
 }
 
 header {
@@ -34,8 +34,10 @@ header {
 }
 
 .logo {
-  width: 150px;      /* Explicit width */
-  height: 50px;      /* Explicit height */
+  max-width: 150px;
+  max-height: 50px;
+  width: auto;
+  height: auto;
 }
 
 nav {

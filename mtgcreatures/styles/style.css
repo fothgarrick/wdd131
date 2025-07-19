@@ -19,6 +19,10 @@ h1, h2, h3 {
   font-family: 'Cinzel', serif;
 }
 
+h1 {
+  margin-bottom: 0.5rem;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -46,7 +50,7 @@ nav a {
 }
 
 nav a:hover,
-nav a:focus {
+nav a:focus-visible {
   text-decoration: underline;
 }
 
@@ -119,8 +123,26 @@ main {
 }
 
 .card button:hover,
-.card button:focus {
+.card button:focus-visible {
   background-color: #ffd700;
+}
+
+/* Clear Favorites Button */
+#clearFavoritesBtn {
+  background-color: #a43312;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#clearFavoritesBtn:hover,
+#clearFavoritesBtn:focus-visible {
+  background-color: #d6472a;
 }
 
 footer {
@@ -140,11 +162,11 @@ footer {
   overflow: hidden;
 }
 
-/* Focus styles for accessibility */
-a:focus,
-button:focus,
-input:focus,
-select:focus {
+/* Improved Focus Styles */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
   outline: 2px solid #e7c24f;
   outline-offset: 2px;
 }

@@ -17,25 +17,27 @@ function loadFavorites() {
     cardEl.classList.add("card");
 
     const img = document.createElement("img");
-    img.src = card.image.replace("art_crop", "normal"); // optional optimization
+    img.src = card.image.includes("art_crop")
+      ? card.image.replace("art_crop", "normal")
+      : card.image;
     img.alt = card.name;
     img.width = 300;
     img.height = 420;
 
-    const h3 = document.createElement("h3");
-    h3.textContent = card.name;
+    const title = document.createElement("h3");
+    title.textContent = card.name;
 
-    const type = document.createElement("p");
-    type.textContent = `${card.type} — ${card.color}`;
+    const typeColor = document.createElement("p");
+    typeColor.textContent = `${card.type} — ${card.color}`;
 
     const cost = document.createElement("p");
     cost.textContent = `Mana Cost: ${card.cost}`;
 
-    const btn = document.createElement("button");
-    btn.textContent = "Remove";
-    btn.addEventListener("click", () => confirmRemove(card.name));
+    const button = document.createElement("button");
+    button.textContent = "Remove";
+    button.addEventListener("click", () => confirmRemove(card.name));
 
-    cardEl.append(img, h3, type, cost, btn);
+    cardEl.append(img, title, typeColor, cost, button);
     favoritesGrid.appendChild(cardEl);
   });
 }

@@ -27,26 +27,28 @@ function createCardElement(card) {
   cardEl.classList.add("card");
 
   const img = document.createElement("img");
-  img.src = card.image;
+  img.src = card.image.includes("art_crop")
+    ? card.image.replace("art_crop", "normal")
+    : card.image;
   img.alt = card.name;
-  img.width = 300;      // Explicit width for performance and CLS
-  img.height = 420;     // Standard MTG card ratio
+  img.width = 300;
+  img.height = 420;
 
-  const h3 = document.createElement("h3");
-  h3.textContent = card.name;
+  const title = document.createElement("h3");
+  title.textContent = card.name;
 
-  const type = document.createElement("p");
-  type.textContent = `${card.type} — ${card.color}`;
+  const typeColor = document.createElement("p");
+  typeColor.textContent = `${card.type} — ${card.color}`;
 
   const cost = document.createElement("p");
   cost.textContent = `Mana Cost: ${card.cost}`;
 
   const button = document.createElement("button");
   button.textContent = "Add to Favorites";
-  button.setAttribute("data-name", card.name);
+  button.dataset.name = card.name;
   button.addEventListener("click", () => addToFavorites(card));
 
-  cardEl.append(img, h3, type, cost, button);
+  cardEl.append(img, title, typeColor, cost, button);
   return cardEl;
 }
 

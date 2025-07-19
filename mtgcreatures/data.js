@@ -1,4 +1,3 @@
-// data.js
 export const cards = [
   {
     name: "Shivan Dragon",

@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Favorites - MTG Creature Gallery</title>
+  <meta name="description" content="View your favorite MTG creature cards." />
+  <title>Your Favorite Creatures</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="styles/style.css" />
-  <link rel="icon" href="images/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Roboto&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header>
-    <img src="images/logo.png" class="logo" alt="Site logo" width="150" height="50" />
+    <img src="images/logo.png" alt="MTG Creature Gallery logo" class="logo" loading="lazy" />
     <nav>
       <a href="index.html">Home</a>
-      <a href="favorites.html">Favorites</a>
+      <a href="favorites.html" aria-current="page">Favorites</a>
     </nav>
   </header>
 
@@ -21,14 +23,14 @@
     <p>These are the MTG creature cards you’ve saved. You can remove them from your list below.</p>
     <button id="clearFavoritesBtn">Clear All Favorites</button>
     <section id="favoritesGrid" class="card-grid" aria-live="polite">
-      <!-- Cards will be rendered by favorites.js -->
+      <!-- JavaScript will render saved cards here -->
     </section>
   </main>
 
   <footer>
-    &copy; 2025 MTG Creature Gallery. All rights reserved.
+    <p>&copy; 2025 MTG Creature Gallery. Built for WDD 131.</p>
   </footer>
 
-  <script type="module" src="mtgcreatures/favorites.js"></script>
+  <script type="module" src="favorites.js"></script>
 </body>
 </html>

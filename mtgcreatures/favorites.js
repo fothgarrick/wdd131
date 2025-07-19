@@ -16,28 +16,17 @@ function loadFavorites() {
     const cardEl = document.createElement("div");
     cardEl.classList.add("card");
 
-    const img = document.createElement("img");
-    img.src = card.image.includes("art_crop")
-      ? card.image.replace("art_crop", "normal")
-      : card.image;
-    img.alt = card.name;
-    img.width = 300;
-    img.height = 420;
+    cardEl.innerHTML = `
+      <img src="${card.image}" alt="${card.name}" />
+      <h3>${card.name}</h3>
+      <p>${card.type} — ${card.color}</p>
+      <p>Mana Cost: ${card.cost}</p>
+      <button>Remove</button>
+    `;
 
-    const title = document.createElement("h3");
-    title.textContent = card.name;
+    const btn = cardEl.querySelector("button");
+    btn.addEventListener("click", () => confirmRemove(card.name));
 
-    const typeColor = document.createElement("p");
-    typeColor.textContent = `${card.type} — ${card.color}`;
-
-    const cost = document.createElement("p");
-    cost.textContent = `Mana Cost: ${card.cost}`;
-
-    const button = document.createElement("button");
-    button.textContent = "Remove";
-    button.addEventListener("click", () => confirmRemove(card.name));
-
-    cardEl.append(img, title, typeColor, cost, button);
     favoritesGrid.appendChild(cardEl);
   });
 }

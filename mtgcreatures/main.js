@@ -26,29 +26,17 @@ function createCardElement(card) {
   const cardEl = document.createElement("div");
   cardEl.classList.add("card");
 
-  const img = document.createElement("img");
-  img.src = card.image.includes("art_crop")
-    ? card.image.replace("art_crop", "normal")
-    : card.image;
-  img.alt = card.name;
-  img.width = 300;
-  img.height = 420;
+  cardEl.innerHTML = `
+    <img src="${card.image}" alt="${card.name}" />
+    <h3>${card.name}</h3>
+    <p>${card.type} — ${card.color}</p>
+    <p>Mana Cost: ${card.cost}</p>
+    <button data-name="${card.name}">Add to Favorites</button>
+  `;
 
-  const title = document.createElement("h3");
-  title.textContent = card.name;
-
-  const typeColor = document.createElement("p");
-  typeColor.textContent = `${card.type} — ${card.color}`;
-
-  const cost = document.createElement("p");
-  cost.textContent = `Mana Cost: ${card.cost}`;
-
-  const button = document.createElement("button");
-  button.textContent = "Add to Favorites";
-  button.dataset.name = card.name;
+  const button = cardEl.querySelector("button");
   button.addEventListener("click", () => addToFavorites(card));
 
-  cardEl.append(img, title, typeColor, cost, button);
   return cardEl;
 }
 
